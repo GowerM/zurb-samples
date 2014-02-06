@@ -57,9 +57,9 @@
       <a href="#" data-reveal-id="NoBgModal" data-reveal>No Background Modal</a>
 
       <!-- Basic Modal Content -->
-      <!-- [] Change size of modal -->
-      <!-- [] Change color & opacity of overlay -->
-      <div id="BasicModal" class="reveal-modal" data-reveal>
+      <!-- [x] Change size of modal -->
+      <!-- [x] Change color & opacity of overlay -->
+      <div id="BasicModal" class="reveal-modal xlarge" data-reveal>
         <p>Basic Modal</p>
         <a class="close-reveal-modal">&#215;</a>
       </div>
@@ -122,10 +122,18 @@
     <script>
       
       // Make Foundation Go
-      $(document).foundation();
+      $(document).foundation({
+
+        orbit: {
+          bullets: true,
+          circular: false,
+          animation: 'fade'
+        };
+
+      });
 
       // Activate modal on page load
-      // $('#BasicModal').foundation('reveal', 'open');
+      //$('#BasicModal').foundation('reveal', 'open');
 
       // Customize Orbit
 
